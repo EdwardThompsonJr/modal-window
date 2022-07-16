@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing exercise</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <h1>Testing exercise</h1>
+    <button id="myBtn">Открыть окно</button>
+    <div id="myModal" class="modal">
+        <div class="modalContent">
+            <div class="modalHeader">
+                <span class="close">x</span>
+                <p>Title form<p>
+            </div>
+            <div class="modalBody">
+                <form action="/Users/ZALMAN/Desktop/тестовое/test.php">
+                    <label for="fName" id="usersData1">First Name *</label>
+                    <input type="text" id="fName" name="fName" value="First Name *"><br>
+                    <div id="err1"><p>Please fill in first name.</p></div>
+                    <label for="lName" id="usersData2">Last Name *</label>
+                    <input type="text" id="lName" name="lName" value="Last Name *"><br>
+                    <div id="err2"><p>Please fill in last name.</p></div>
+                    <label for="eMail" id="usersData3">user@gmail.com *</label>
+                    <input type="text" id="eMail" name="eMail" value="user@gmail.com *"><br>
+                    <div id="err3"><p id="eMailErr"></p></div>
+                </form>
+                <div style="padding-top: 10px; padding-bottom: 10px;"><p>Product type *
+                <select id="selector" onclick="total()">
+                    <option value=0 selected="selected">Select product type</option>
+                    <option value=50>Product $50</option>
+                    <option value=100>Product $100</option>
+                    <option value=300>Product $300</option>
+                </select></p><p id="err4">Please select product type.</p></div>
+                <div><p>Additional feature for $100 
+                  <label class="switch">
+                    <input type="checkbox" id="one" onclick="total()">
+                    <span class="slider round"></span>
+                  </label></p></div>
+                <div><p>Additional feature for $200 
+                    <label class="switch">
+                      <input type="checkbox" id="two" onclick="total()">
+                      <span class="slider round"></span>
+                    </label>
+                </p></div>
+                <div>
+                    <label for="comment" id="comm">Type your comment...</label><br>
+                    <input type="text" id="comment" name="comment" value="Type your comment...">
+                </div>
+            </div>
+            <div class="modalFooter">
+                <p>Total price<div id="totalPrice">$0</div></p><br>
+                <input type="submit" value="Send form" id="submit" onclick="result()">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="test.js"></script>
+</body>
+</html>
